@@ -1,0 +1,21 @@
+var img_viewer = function() {
+	var $overlay, imgScroll, $body = $("body"), st;
+	$(".ecoupon-list ul li .ecoupon-pic").click(function() {
+		$(".ecoupon-list").hide();
+		st = $body.scrollTop();
+		var h = $body.height();
+		var html = '<div class="overlay" style="z-index:9300;background:rgba(0, 0, 0, 1);"><div class="pic-viewer"><div id="div"><img src="images/kfc-5ikfc-12_c7.jpg"></div></div><a href="javascript:void(0);" class="hide-img">关闭</a></div>';
+		$body.append(html);  //添加黑色透明背景
+		$viewer = $(".pic-viewer"), $overlay = $(".overlay");
+		$viewer.css({"height" : h + "px", "line-height" : h + "px"});	
+		imgScroll = new IScroll(".pic-viewer", {zoom : true, scrollX : true, scrollY : true, mouseWheel : true, wheelAction : 'zoom', click : true });
+	});
+	$("body").on("click", ".pic-viewer", function(){ hide_img(); });
+	$("body").on("click", ".hide-img", function(){ hide_img(); });
+	function hide_img() {
+		imgScroll.destroy();
+		$(".ecoupon-list").show();
+		$body.scrollTop(st);
+		$overlay.remove();		
+	}
+}();

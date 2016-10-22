@@ -1,0 +1,117 @@
+var img_viewer = {
+	$overlay : null,
+	imgScroll : null,
+	$body : $("body"),
+	st : 0,
+	
+	startX : 0,
+	endX : 0, 
+	startY : 0, 
+	endY : 0,
+	movePrevent : false,
+	$viewer : null,
+	id : 1,
+	
+	show_img : function() {
+		img_viewer.st = img_viewer.$body.scrollTop();
+		$(".ecoupon-list").hide();
+		var h = img_viewer.$body.height();
+		var html = '<div class="overlay" style="z-index:9300;background:rgba(0, 0, 0, 1);"><div class="pic-viewer"><div class="img" id="img0'+ img_viewer.id +'"><div class="load-pic"></div><img src="images/kfc-5ikfc-12_c7.jpg"></div></div><a href="javascript:void(0);" class="hide-img">关闭</a></div>';
+		img_viewer.$body.append(html); 
+		img_viewer.hide_loading(img_viewer.id);
+		img_viewer.$overlay = $(".overlay");
+		img_viewer.$viewer = $(".pic-viewer");
+		img_viewer.$viewer.css({"line-height" : h + "px"});	
+		img_viewer.imgScroll = new IScroll(".pic-viewer", { scrollY : true, mouseWheel : true, click : true });
+	},
+	
+	hide_img : function() {
+		if(img_viewer.$overlay != null) {
+			img_viewer.imgScroll.destroy();
+		    $(".ecoupon-list").show();
+		    img_viewer.$body.scrollTop(img_viewer.st);
+		    img_viewer.$overlay.remove();	
+		}
+	},
+	
+	hide_loading : function(id) {
+		$("#img0"+ id +" img").ready(function(){ $("#img0"+ id +" .load-pic").remove(); });
+	},
+	
+	_bindEvent : function() {
+		this.$body.delegate(".ecoupon-pic","click", this.show_img);
+		this.$body.delegate(".hide-img, .pic-viewer","click", this.hide_img);
+		this.$body.delegate(".overlay", "touchstart", function(e){ e = e.changedTouches[0]; img_viewer.onStart(e); });
+        this.$body.delegate(".overlay", "touchmove", function(e){ img_viewer.onMove(e.changedTouches[0]); });
+        this.$body.delegate(".overlay", "touchend", function(e){ img_viewer.onEnd(e.changedTouches[0]); });
+	},
+	
+	//开始滑动时
+	onStart : function(e) {
+		if(img_viewer.movePrevent == true){ event.preventDefault(); return false; }
+	    img_viewer.startX = e.pageX;
+	    img_viewer.startY = e.pageY;
+    },
+	onMove : function(e) {
+		event.preventDefault();
+		if(img_viewer.movePrevent == true){ return false;}
+	},
+	
+	onEnd : function(e) {
+		if(img_viewer.movePrevent == true){ event.preventDefault(); return false;}
+		// 抬起点，页面位置
+		img_viewer.endX = e.pageX;
+		img_viewer.endY = e.pageY;
+		img_viewer.movePrevent = true; //页面动画时阻止触发 
+		// swipe事件默认大于20px才会触发
+		if(Math.abs(img_viewer.endX-img_viewer.startX)<=20) {
+			img_viewer.movePrevent = false;
+		}else{
+			if(Math.abs(img_viewer.endY-img_viewer.startY)<=50){
+				if(img_viewer.endX>img_viewer.startX){
+					img_viewer.prePic();
+				}else{
+					img_viewer.nextPic();
+				}
+			}else{
+				img_viewer.movePrevent = false;
+			}
+		}
+	},
+	
+    //下一张图片
+    nextPic : function() {
+		img_viewer.id++;
+		img_viewer.$viewer.addClass("tran-effect");
+	    img_viewer.$viewer.append('<div class="img" style="left:100%;" id="img0'+ img_viewer.id +'"><div class="load-pic"></div><img src="images/1.png"></div>'); 
+		img_viewer.hide_loading(img_viewer.id);
+	    img_viewer.$viewer.css("left","-100%");
+	    img_viewer.moving();	 
+    },
+    //前一张图片
+    prePic : function() {
+		img_viewer.id++;
+		img_viewer.$viewer.addClass("tran-effect");
+	    $('<div class="img" style="left:-100%;" id="img0'+ img_viewer.id +'"><div class="load-pic"></div><img src="images/1.png"></div>').appendTo(img_viewer.$viewer);	
+		img_viewer.hide_loading(img_viewer.id);
+	    img_viewer.$viewer.css("left","100%");
+	    img_viewer.moving();
+    }, 
+    moving : function() {
+	    img_viewer.movePrevent = true;
+	    setTimeout(function() {
+		    img_viewer.$viewer.removeClass("tran-effect").css("left","0");
+		    $(".img:first-child", img_viewer.$viewer).remove();
+		    $(".img:first-child", img_viewer.$viewer).css("left", "0");
+		    img_viewer.movePrevent = false; 
+			img_viewer.imgScroll.destroy();
+		    img_viewer.imgScroll = new IScroll(".pic-viewer", { scrollY : true, mouseWheel : true, click : true });
+	    }, 800);		
+    },
+  
+	init : function() {
+		this._bindEvent();
+	}
+}
+
+img_viewer.init();

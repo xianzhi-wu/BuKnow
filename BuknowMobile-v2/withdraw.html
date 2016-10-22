@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="email=no">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="Keywords" content=""/>
+<meta name="Description" content=""/>
+<title>提现</title>
+<link rel="stylesheet" type="text/css" href="css/mobile-bn-global.css"/>
+</head>
+
+<body>
+  <header class="header box-layout">
+    <a href="javascript:history.go(-1)" class="back">返回</a>
+    <div class="header-title box-col">提现</div>
+    <div class="blank-space"></div>
+  </header>
+  
+  <div class="main">
+    <div class="withdraw-tit">可提余额：<span id="balance">12.20元</span><div class="withdraw-all">前部提现</div></div>
+    <div class="withdraw-inputs">
+      <div class="input-line box-layout"><div class="label">提现金额</div><div class="box-col"><input type="text" id="withdraw-amount" class="wd-input" placeholder="少于钱袋金额"></div></div>
+      <div class="input-line box-layout"><div class="label">支付宝帐号</div><div class="box-col" id="account">18825234540</div></div>
+      <a href="javascript:void(0);" class="input-line box-layout"><div class="label">手机号</div><div class="box-col">请先绑定手机号</div><i class="goto"></i></a>
+        <div class="input-line box-layout"><div class="label">手机号</div><div class="box-col"><input type="text" class="wd-input" value="1232345456"></div><a href="javascript:void(0);" class="get-code" id="get-code">获取验证码</a></div>
+      <div class="input-line box-layout"><div class="label">手机验证码</div><div class="box-col"><input type="text" id="vericode" class="wd-input" placeholder="6位数验证码"></div></div>
+    </div>
+    <div class="wd-tip">提示：一天只能提现一次</div>
+    <div class="error-tips"></div>
+    <a href="javascript:void(0);" class="submit-btn g-b" id="confirm-withdraw">确定</a>
+  </div>
+  <script src="js/zepto.min.js"></script>
+  <script>
+    /*帐号安全*/
+	var pregMobile = /^(1(([3578][0-9])|(47)))\d{8}$/;  //读取php配置的正则
+    var pregEmail = /^[a-z|A-Z|0-9]+([\.|\-|_][a-z|A-Z|0-9]+)*@[a-z|A-Z|0-9]+([\.|\-][a-z|A-Z|0-9]+)*(\.[a-z|A-Z]+)+$/i;  //读取php配置的正则
+	var account = $("#account").text();
+	
+	if(pregMobile.test(account) == true){
+	    var str1 = account.substring(0, 3), str2 = account.substring(7, 11);
+        str = str1 + "****" + str2;
+	    $("#account").text(str);
+	} else if(pregEmail.test(account) == true) {
+	    var len = account.lastIndexOf("@");
+	    var str1 = account.substring(0, len), str2 = account.substring(len);
+        var temp = "";
+        for (var i = 0; i < (len - 2); i++) {
+            temp += "*";
+        }
+        str = str1.replace(/(\w)[\s\S]*(\w)/g, "$1" + temp + "$2") + str2;
+	    $("#account").text(str);
+	}
+	
+	$(".withdraw-all").click(function() {
+		var amount = "12.00";
+		$("#withdraw-amount").val(amount);
+	})
+	
+    function checkWithdrawAmount() {
+		var pregMoney = /^(([1-9]\d*)|\d)(\.\d{1,2})?$/;
+		var value = $("#withdraw-amount").val();
+		
+		if(value == "" || value.length == 0) {
+			$(".error-tips").text("请输入提现金额").css("visibility", "visible");
+			return false;
+		} else if(pregMoney.test(value) == false) {
+			$(".error-tips").text("提现金额格式错误").css("visibility", "visible");
+			return false;
+		} else if(value == 0 || value == 0.0 || value == 0.00) {
+			$(".error-tips").text("提现金额不能为0").css("visibility", "visible");
+			return false;
+		} else {
+			$(".error-tips").css("visibility", "hidden");
+		}
+		return true;
+	}
+	function checkVericode() {
+		var value = $("#vericode").val();
+		
+		if(value == "" || value.length == 0) {
+			$(".error-tips").text("请输入验证码").css("visibility", "visible");
+			return false;
+		} else {
+			$(".error-tips").css("visibility", "hidden");
+		}
+		return true;
+	}
+	
+	$("#confirm-withdraw").click(function() {
+		if(checkWithdrawAmount() && checkVericode()) {
+		}
+	})
+  </script>
+</body>
+</html>

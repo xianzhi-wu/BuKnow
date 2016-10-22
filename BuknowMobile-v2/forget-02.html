@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="email=no">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="Keywords" content=""/>
+<meta name="Description" content=""/>
+<title>找回密码</title>
+<link rel="stylesheet" type="text/css" href="css/mobile-bn-global.css"/>
+</head>
+
+<body>
+  <header class="header box-layout">
+    <a href="javascript:history.go(-1)" class="back">返回</a>
+    <div class="header-title box-col">找回密码</div>
+    <div class="blank-space"></div>
+  </header>
+  
+  <div class="main">
+    <form>
+      <div class="forget-tit">密码为6-16个字符</div>
+      <div class="forget-inputs"> 
+        <div class="input-line box-layout"><div class="label">新密码</div><div class="box-col"><input type="password" class="f-input" id="password01"></div></div>
+        <div class="input-line box-layout"><div class="label">重复新密码</div><div class="box-col"><input type="password" class="f-input" id="password02"></div></div>
+      </div>
+      <div class="error-tips"></div>
+      <a href="javascript:void(0);" class="submit-btn" id="f-btn02">确定</a>
+    </form>
+  </div>
+  <div class="tip"></div>
+  <script src="js/zepto.min.js"></script>
+  <script>
+    function checkPassword() {
+		var value = $("#password01").val();
+		var pregPassword = /^[0-9a-zA-Z!@#$%^&*]{6,16}$/;
+		
+		if (value == '' || value.length == 0) {
+			$(".error-tips").text("请输入密码").css("visibility", "visible");
+			return false;
+		} else if (pregPassword.test(value) === false) {
+			$(".error-tips").text("密码格式错误").css("visibility", "visible");
+			return false;
+		} else {
+			$(".error-tips").css("visibility", "hidden");
+		}
+		return true;
+	}
+	
+	function confirmPassword() {
+		var value = $("#password02").val();
+		
+		if (value == '' || value.length == 0) {
+			$(".error-tips").text("请确认密码").css("visibility", "visible");
+			return false;
+		} else if (value !== $("#password01").val()) {
+			$(".error-tips").text("两次密码输入不一致").css("visibility", "visible");
+			return false;
+		} else {
+			$(".error-tips").css("visibility", "hidden");
+		}
+		return true;
+	}
+	
+	$("#f-btn02").click(function() {
+		if(checkPassword() && confirmPassword()) {
+			$(".tip").text("成功设置新密码").show();
+			setTimeout(function() {
+				$(".tip").hide();
+				window.href = ""; //跳转到登录页面
+			}, 1000)
+		}
+	})
+  </script>
+</body>
+</html>

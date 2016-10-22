@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="email=no">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="Keywords" content=""/>
+<meta name="Description" content=""/>
+<title>爆料内容</title>
+<link rel="stylesheet" type="text/css" href="css/mobile-bn-global.css"/>
+<link rel="stylesheet" type="text/css" href="css/bn-publish.css">
+<link rel="stylesheet" type="text/css" href="css/zepto.mdater.css">
+</head>
+
+<body>
+  <header class="header box-layout">
+    <a href="javascript:history.go(-1)" class="back">返回</a>
+    <div class="header-title box-col">发布爆料</div>
+    <a class="header-text">帮助</a>
+  </header>
+  
+  <div class="main">
+    <form>
+      <div class="publish-inputs">
+        <div class="input-line box-layout gap"><div class="label">活动标题</div><div class="box-col"><input class="p-input" id="address" placeholder="活动的主题"></div></div>
+        <div class="input-line box-layout"><div class="label">开始时间</div><div class="box-col"><input class="p-input" readonly id="start"></div></div>
+        <div class="input-line box-layout"><div class="label">截止时间</div><div class="box-col"><input class="p-input" readonly id="end"></div></div>
+      </div>
+      <textarea class="p-textarea" rows="2" id="address" placeholder="请输入商家详细地址"></textarea>
+      <textarea class="p-textarea" rows="4" id="content" placeholder="请输入活动相关内容"></textarea> 
+      <a href="javascript:void(0);" class="submit-btn" id="publish-btn">发布</a>
+    </form>
+  </div>
+  <div class="tip"></div>
+  <script src="js/zepto.min.js"></script>
+  <script src="js/zepto.mdater.js"></script>
+  <script>
+    function start_date() {
+        var today = new Date();
+        var year = today.getFullYear(), month = today.getMonth() < 9 ? ("0" + (today.getMonth() + 1)) : (today.getMonth() + 1), day = today.getDate(); 
+	    var start = year+'-'+month+'-'+day;
+	    $("#start").val(start);
+	}
+	start_date();
+	
+	$('#end').mdater({
+	    minDate : new Date()
+    });
+	
+	$("#publish-btn").click(function() {
+		start_date(); 
+		tip("发布成功");
+	})
+	function tip(str) {
+		$(".tip").text(str).show();
+		setTimeout(function() {
+			$(".tip").hide()
+		}, 1500)
+	}
+  </script>
+</body>
+</html>
+
+

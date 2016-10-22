@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>懒加载</title>
+</head>
+
+<body>
+<img src="images/mall-name.jpg" data-src="images/kfc-5ikfc-12_c7.jpg" class="lazy">
+<div>我在使用jquery.lazy.load插件的时候发现，占位的图片的都是统一的大小，如果我传输后真实的图片比这个占位的图片大或者小，总之和这个占位不一样大，则懒加载的效果很奇怪， 有大神知道怎么接觉这个问题吗？
+例如上面这句代码， default.png 的图片大小和data-original里的图片大小是一样的，如果说我需要加载的图片大小不一致应该怎么办， 我可以获取data-originnal里面这个地址图片的大小，然后根据这个长宽来定default.png图片的大小吗？</div>
+<img src="images/mall-name.jpg" data-src="images/1.png" class="lazy">
+<div>我在使用jquery.lazy.load插件的时候发现，占位的图片的都是统一的大小，如果我传输后真实的图片比这个占位的图片大或者小，总之和这个占位不一样大，则懒加载的效果很奇怪， 有大神知道怎么接觉这个问题吗？
+例如上面这句代码， default.png 的图片大小和data-original里的图片大小是一样的，如果说我需要加载的图片大小不一致应该怎么办， 我可以获取data-originnal里面这个地址图片的大小，然后根据这个长宽来定default.png图片的大小吗？</div>
+<img src="images/mall-name.jpg" data-src="images/banner01.jpg" class="lazy">
+<div>我在使用jquery.lazy.load插件的时候发现，占位的图片的都是统一的大小，如果我传输后真实的图片比这个占位的图片大或者小，总之和这个占位不一样大，则懒加载的效果很奇怪， 有大神知道怎么接觉这个问题吗？
+例如上面这句代码， default.png 的图片大小和data-original里的图片大小是一样的，如果说我需要加载的图片大小不一致应该怎么办， 我可以获取data-originnal里面这个地址图片的大小，然后根据这个长宽来定default.png图片的大小吗？</div>
+<img src="images/mall-name.jpg" data-src="images/complete-info.jpg" class="lazy">
+<div>我在使用jquery.lazy.load插件的时候发现，占位的图片的都是统一的大小，如果我传输后真实的图片比这个占位的图片大或者小，总之和这个占位不一样大，则懒加载的效果很奇怪， 有大神知道怎么接觉这个问题吗？
+例如上面这句代码， default.png 的图片大小和data-original里的图片大小是一样的，如果说我需要加载的图片大小不一致应该怎么办， 我可以获取data-originnal里面这个地址图片的大小，然后根据这个长宽来定default.png图片的大小吗？</div>
+<img src="images/mall-name.jpg" data-src="images/new.jpg" class="lazy">
+<script src="js/lib/zepto.min.js"></script>
+<script>
+var mebook={
+		refreshTimer:null,
+		lazyImg:'mall',
+		settings:function(config){
+			mebook.lazyImg=config.lazyImg=='undefined'?'blank':config.lazyImg;
+		},
+		belowthefold:function(element){
+			var fold = $(window).height() + $(window).scrollTop();
+			return fold <= $(element).offset().top;
+		},
+		abovethetop:function(element){
+			var top = $(window).scrollTop();
+			return top >= $(element).offset().top + $(element).height();
+		},
+		inViewport:function(element){
+			return !mebook.belowthefold(element) && !mebook.abovethetop(element);
+		},
+		loadImg:function (li) {
+			if (li.length) {
+				var img = li,
+					src = img.attr('data-src');
+				img.attr('src', src);
+			}
+		},
+		getInViewportList : function () {
+			var list = $('.lazy'),
+					ret = [];
+			list.each(function (i) {
+			var li = list.eq(i);
+			if(li.attr('src').indexOf(mebook.lazyImg)>=0){
+				if (mebook.inViewport(li)) {
+					console.log("");
+					mebook.loadImg(li);
+				}
+			}
+			});
+		},
+		showFunction:function(){
+			mebook.getInViewportList();//榛樿鎵ц涓€娆★紝淇濊瘉绗竴椤垫湁鍟嗗搧鍥剧墖
+			$(window).scroll(function(){
+				if (mebook.refreshTimer) {
+					clearTimeout(mebook.refreshTimer);
+					mebook.refreshTimer = null;
+				}
+				mebook.refreshTimer = setTimeout(mebook.getInViewportList(), 300);
+			})
+		}
+	}
+mebook.showFunction();
+</script>
+</body>
+</html>

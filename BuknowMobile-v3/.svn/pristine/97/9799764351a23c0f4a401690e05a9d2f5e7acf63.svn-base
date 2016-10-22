@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="Keywords" content=""/>
+<meta name="Description" content=""/>
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/bn-common.css">
+</head>
+
+<body>
+<header class="header box-layout">
+  <a class="back" href="javascript:void(0);"></a>
+  <div class="header-title box-col">美食</div>
+  <div class="blank-space"></div>
+</header>
+
+<article>
+  <section class="catelist-nav">
+    <div class="cate">
+      <ul class="box-layout">
+        <li class="box-col"><a href="javascript:void(0);" data-type="category">美食<i class="drop"></i></a></li>
+        <li class="box-col"><a href="javascript:void(0);" data-type="type">活动/优惠券<i class="drop"></i></a></li>
+        <li class="box-col"><a href="javascript:void(0);" data-type="district">全部区域<i class="drop"></i></a></li>
+      </ul>
+    </div>
+    
+    <div class="dropdown-selector hide" data-type="category">
+      <div class="selector-wrapper box-layout">
+        <div class="selector-view box-col">
+          <ul>
+            <li><a href="http://www.baidu.com">全部分类</a></li>
+            <li class="selected"><a href="" data-main="cate_food">美食<i class="goto"></i></a></li>
+            <li><a href="http://www.baidu.com" data-main="cate_lady">丽人<i class="goto"></i></a></li>
+            <li><a href="" data-main="cate-shopping">购物<i class="goto"></i></a></li>
+            <li><a href="" data-main="cate-ent">娱乐<i class="goto"></i></a></li>
+            <li><a href="#" data-main="cate-service">生活服务<i class="goto"></i></a></li>
+            <li><a href="#" data-main="cate-health">健康<i class="goto"></i></a></li>
+            <li><a href="#" data-main="cate-travel">旅游<i class="goto"></i></a></li>
+            <li><a href="#" data-main="cate-hotel">酒店<i class="goto"></i></a></li>
+          </ul>
+        </div>
+        <div class="selector-sider box-col hide" data-main="cate_food">
+          <ul>
+            <li><a href="" class="selected">全部美食</a></li>
+            <li><a href="">美食</a></li>
+            <li><a href="">美食</a></li>
+            <li><a href="">美食</a></li>
+            <li><a href="">美食</a></li>
+            <li><a href="">美食</a></li>
+            <li><a href="">美食</a></li>
+            <li><a href="">美食</a></li>
+            <li><a href="">美食</a></li>
+            <li><a href="">美食</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-selector hide" data-type="type">
+      <div class="selector-wrapper box-layout">
+        <div class="selector-view box-col">
+          <ul>
+            <li class="selected"><a href="http://www.baidu.com" data-main="cate_emptyMenu">全部</a></li>
+            <li><a href="" data-main="cate_emptyMenu">优惠券</a></li>
+            <li><a href="" data-main="cate_emptyMenu">活动</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-selector hide" data-type="district">
+      <div class="selector-wrapper box-layout">
+        <div class="selector-view box-col">
+          <ul>
+            <li class="selected"><a href="http://www.baidu.com" data-main="cate_emptyMenu">全部区域</a></li>
+            <li><a href="" data-main="cate_emptyMenu">江岸区</a></li>
+            <li><a href="" data-main="cate_emptyMenu">江夏区</a></li>
+            <li><a href="" data-main="cate_emptyMenu">江夏区</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="deals-group">
+    <div class="deals-list">
+      <a href="#" class="brand-name">麦当劳<span>(660米)</span></a>
+      <a href="#" class="box-layout">
+        <div class="img img-box"><img src="images/m2.jpg"></div>
+        <div class="cont box-col"> 
+          <div class="title">满50元减7元 满50元减7元 满50元减7元满50元减7元</div>
+          <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+          <div class="expired-time">截止时间:2015-12-30</div>
+        </div>
+      </a>
+      <a href="#" class="box-layout">
+        <div class="img img-box"><img src="images/m.jpg"></div>
+        <div class="cont box-col"> 
+          <div class="title">满50元减7元</div>
+          <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+          <div class="expired-time">截止时间:2015-12-30</div>
+        </div>
+      </a> 
+      <a href="javascript:void(0);" class="more">显示其他3个优惠券</a>
+    </div>
+    <div class="deals-list">
+      <a href="#" class="brand-name">麦当劳<span>(660米)</span></a>
+      <a href="#" class="box-layout">
+        <div class="img img-box"><img src="images/m2.jpg"></div>
+        <div class="cont box-col"> 
+          <div class="title">满50元减7元 满50元减7元 满50元减7元满50元减7元</div>
+          <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+          <div class="expired-time">截止时间:2015-12-30</div>
+        </div>
+      </a>
+      <a href="#" class="box-layout">
+        <div class="img img-box"><img src="images/m.jpg"></div>
+        <div class="cont box-col"> 
+          <div class="title">满50元减7元</div>
+          <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+          <div class="expired-time">截止时间:2015-12-30</div>
+        </div>
+      </a> 
+      <a href="javascript:void(0);" class="more">显示其他3个优惠券</a>
+    </div>
+    <div class="deals-list">
+      <a href="#" class="brand-name">麦当劳<span>(660米)</span></a>
+      <a href="#" class="box-layout">
+        <div class="img img-box"><img src="images/m2.jpg"></div>
+        <div class="cont box-col"> 
+          <div class="title">满50元减7元 满50元减7元 满50元减7元满50元减7元</div>
+          <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+          <div class="expired-time">截止时间:2015-12-30</div>
+        </div>
+      </a>
+      <a href="#" class="box-layout">
+        <div class="img img-box"><img src="images/m.jpg"></div>
+        <div class="cont box-col"> 
+          <div class="title">满50元减7元</div>
+          <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+          <div class="expired-time">截止时间:2015-12-30</div>
+        </div>
+      </a> 
+    </div>
+    <div class="deals-list">
+      <a href="#" class="brand-name">麦当劳<span>(660米)</span></a>
+      <a href="#" class="box-layout">
+        <div class="img img-box"><img src="images/m2.jpg"></div>
+        <div class="cont box-col"> 
+          <div class="title">满50元减7元 满50元减7元 满50元减7元满50元减7元</div>
+          <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+          <div class="expired-time">截止时间:2015-12-30</div>
+        </div>
+      </a>
+      <a href="#" class="box-layout">
+        <div class="img img-box"><img src="images/m.jpg"></div>
+        <div class="cont box-col"> 
+          <div class="title">满50元减7元</div>
+          <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+          <div class="expired-time">截止时间:2015-12-30</div>
+        </div>
+      </a> 
+    </div>
+    <div class="deals-list">
+      <a href="#" class="brand-name">麦当劳<span>(660米)</span></a>
+      <a href="#" class="box-layout">
+        <div class="img img-box"><img src="images/m2.jpg"></div>
+        <div class="cont box-col"> 
+          <div class="title">满50元减7元 满50元减7元 满50元减7元满50元减7元</div>
+          <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+          <div class="expired-time">截止时间:2015-12-30</div>
+        </div>
+      </a>
+      <a href="#" class="box-layout">
+        <div class="img img-box"><img src="images/m.jpg"></div>
+        <div class="cont box-col"> 
+          <div class="title">满50元减7元</div>
+          <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+          <div class="expired-time">截止时间:2015-12-30</div>
+        </div>
+      </a> 
+    </div>
+    <div class="deals-list">
+      <a href="#" class="brand-name">麦当劳<span>(660米)</span></a>
+      <a href="#" class="box-layout">
+        <div class="img img-box"><img src="images/m2.jpg"></div>
+        <div class="cont box-col"> 
+          <div class="title">满50元减7元 满50元减7元 满50元减7元满50元减7元</div>
+          <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+          <div class="expired-time">截止时间:2015-12-30</div>
+        </div>
+      </a>
+      <a href="#" class="box-layout">
+        <div class="img img-box"><img src="images/m.jpg"></div>
+        <div class="cont box-col"> 
+          <div class="title">满50元减7元</div>
+          <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+          <div class="expired-time">截止时间:2015-12-30</div>
+        </div>
+      </a> 
+    </div>
+    <a href="javascript:void(0);" class="more-deals">查看更多</a>   
+  </section> 
+</article>
+<div class="overlay hide"></div>
+<footer class="footer">
+  <ul><li><a href="">首页</a></li><li><a href="">个人中心</a></li><li><a href="#">下载客户端</a></li><li><a href="#">电脑版</a></li></ul>
+  <p class="copyright">@copyright 2013-2014, buknow.com</p>
+</footer>
+<script src="js/zepto.min.js"></script>
+<script src="js/iscroll-5.1.2.min.js"></script>
+<script src="js/catelist-nav.js"></script>
+</body>
+</html>

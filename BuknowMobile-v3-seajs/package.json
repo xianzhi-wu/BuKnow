@@ -1,0 +1,10 @@
+{
+  "name": "buknow",
+  "version": "2.0.0",
+  "description": "buknow with seajs",
+  "author": "xianzhi",
+  "license": "MIT",
+  "spm": {
+    "main": "js/build/index.js"
+  }
+}

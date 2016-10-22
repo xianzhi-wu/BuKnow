@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="Keywords" content=""/>
+<meta name="Description" content=""/>
+<title>buknow</title>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+
+<body>
+<header class="header box_layout">
+  <a href="javascript:history.go(-1);" class="back mr44"></a>
+  <div class="header_text box_col">肯德基优惠券</div>
+  <a class="search header_icon"></a>
+  <a class="menu header_icon"></a>
+</header>
+<!--菜单-->
+  <nav class="menu_wrapper">
+    <div class="menu_list">
+      <ul>
+        <li><a class="menu_link"><span class="menu_home menu_icon"></span><span>首页</span></a></li>
+        <li><a class="menu_link"><span class="menu_seller menu_icon"></span><span>商家库</span></a></li>
+        <li><a class="menu_link"><span class="menu_sale menu_icon"></span><span>促销</span></a></li>
+        <li><a class="menu_link"><span class="menu_collect menu_icon"></span><span>收藏</span></a></li>
+        <li><a class="menu_link"><span class="menu_me menu_icon"></span><span>我的</span></a></li>
+        <li><a class="menu_link"><span class="menu_dl menu_icon"></span><span>APP</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+<section class="seller_intro">
+  <div class="intro_link box_layout center_v">
+    <a class="intro_pic"><img src="images/seller_logo/11.png" alt="肯德基"></a>
+    <div class="box_col">
+      <a class="brief_intro">肯德基（KFC），是世界最大的炸鸡快餐连锁企业，隶属于百胜全球餐饮集团（Yum! Brands Inc.）。目前肯德基在世界80多个国家和地区拥</a>
+      <div class="intro_footer">
+        <a class="read_more">显示更多>></a>
+        <div class="collect_btn"><span class="collect_icon"></span><span class="c_text">收藏(0)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="items_list">
+  <ul>
+    <li>
+      
+      <a class="box_layout center_v">
+        <div class="pic"><img src="images/media_pcs/1.jpg" alt="肯德基"><div class="expired">已过期</div></div>
+        <div class="box_col">
+          <div class="name">肯德基</div>
+          <div class="blank"></div>
+          <div class="item_btm">
+            <div class="collect_area"><span class="collect_icon"></span><span class="c_text">收藏(0)</span></div>
+            <div class="time tmt">30分钟前</div>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a class="box_layout center_v">
+        <div class="pic"><img src="images/media_pcs/1.jpg" alt="肯德基"></div>
+        <div class="box_col">
+          <div class="name">肯德基</div>
+          <div class="blank"></div>
+          <div class="item_btm">
+            <div class="collect_area"><span class="collect_icon"></span><span class="c_text">收藏(0)</span></div>
+            <div class="time tmt">30分钟前</div>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</section> 
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".menu").click(function(){
+		$(".menu_wrapper").toggleClass("menu_down");
+	})
+	
+	//限制字符个数
+	$(".brief_intro").each(function(){
+		var maxwidth=45;
+		if($(this).text().length>maxwidth){
+			$(this).text($(this).text().substring(0,maxwidth));
+			$(this).html($(this).html()+'...');
+		}
+	});
+	
+	$(".collect_btn").click(function(){
+		$(".collect_icon",this).css("background-position", "-1rem center");
+		$(".c_text",this).text("取消收藏");
+	})
+})
+</script>
+</body>
+</html>

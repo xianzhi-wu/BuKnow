@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="Keywords" content=""/>
+<meta name="Description" content=""/>
+<title>buknow</title>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+
+<body>
+<header class="header box_layout">
+  <a href="javascript:history.go(-1);" class="back"></a>
+  <div class="header_text box_col">搜索</div>
+  <a class="menu header_icon"></a>
+</header>
+<!--菜单-->
+<nav class="menu_wrapper">
+<div class="menu_list">
+  <ul>
+    <li><a class="menu_link"><span class="menu_home menu_icon"></span><span>首页</span></a></li>
+    <li><a class="menu_link"><span class="menu_seller menu_icon"></span><span>商家库</span></a></li>
+    <li><a class="menu_link"><span class="menu_sale menu_icon"></span><span>促销</span></a></li>
+    <li><a class="menu_link"><span class="menu_collect menu_icon"></span><span>收藏</span></a></li>
+    <li><a class="menu_link"><span class="menu_me menu_icon"></span><span>我的</span></a></li>
+    <li><a class="menu_link"><span class="menu_dl menu_icon"></span><span>APP</span></a></li>
+  </ul>
+</div>
+</nav>
+
+<div class="search_wrapper">
+  <form class="search_form box_layout" method="post">
+    <div class="search_box box_col">
+      <div class="icon_search"></div>
+      <input class="search_text" type="text" placeholder="搜索商家/优惠券...">
+    </div>
+    <button class="search_btn" type="submit">搜索</button>
+  </form>
+</div>
+
+<section class="hot_words_wrapper">
+  <div class="hot_words_tit">
+    <span class="crown"></span>搜索热词
+  </div>
+  <div class="bottom_line"></div>
+  <div class="hot_words_list">
+    <ul>
+      <li><a class="hot_link">肯德基</a></li><li><a class="hot_link">肯德基</a></li><li><a class="hot_link">肯德基</a></li><li><a class="hot_link">肯德基</a></li>
+      <li><a class="hot_link">肯德基</a></li><li><a class="hot_link">肯德基</a></li><li><a class="hot_link">肯德基</a></li><li><a class="hot_link">肯德基</a></li>
+    </ul>
+  </div>
+</section>
+<section class="search_history">
+  <ul>
+    <li><a class="single_line"><span class="history_icon"></span><span>麦当劳</span></a></li>
+    <li><a class="single_line"><span class="history_icon"></span><span>麦当劳</span></a></li>
+    <li><a class="single_line"><span class="history_icon"></span><span>麦当劳</span></a></li>
+    <li><a class="single_line"><span class="history_icon"></span><span>麦当劳</span></a></li>
+  </ul>
+  <a class="clear_search_history">清空历史记录</a>
+</section>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+$(".menu").click(function(){
+		$(".menu_wrapper").toggleClass("menu_down");
+})
+</script>
+</body>
+</html>

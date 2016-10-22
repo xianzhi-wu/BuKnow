@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="Keywords" content=""/>
+<meta name="Description" content=""/>
+<title>buknow</title>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+
+<body>
+<header class="header box_layout">
+  <a href="javascript:history.go(-1);" class="back mr44"></a>
+  <div class="header_text box_col">领取优惠券</div>
+  <a class="search header_icon"></a>
+  <a class="menu header_icon"></a>
+</header>
+<nav class="menu_wrapper">
+    <div class="menu_list">
+      <ul>
+        <li><a class="menu_link"><span class="menu_home menu_icon"></span><span>首页</span></a></li>
+        <li><a class="menu_link"><span class="menu_seller menu_icon"></span><span>商家库</span></a></li>
+        <li><a class="menu_link"><span class="menu_sale menu_icon"></span><span>促销</span></a></li>
+        <li><a class="menu_link"><span class="menu_collect menu_icon"></span><span>收藏</span></a></li>
+        <li><a class="menu_link"><span class="menu_me menu_icon"></span><span>我的</span></a></li>
+        <li><a class="menu_link"><span class="menu_dl menu_icon"></span><span>APP</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+<section class="coupon_wrapper">
+  <div class="collect_share">
+    <a><span class="collect_icon"></span>收藏(1)</a>
+    <a href="javascript:void(0)" onClick="share();"><span class="share"></span>分享</a>
+   </div>
+  <div class="coupon_pic"><img src="images/media_pcs/quan.png" alt="肯德基"/></div>
+  <div class="coupon_name">C60套餐:肯德基早餐优惠券，嫩烤玉米鸡肉堡+醇豆浆（热）/经典咖啡 6元</div>
+  <div class="valid_date">有效期截止：2014/12/30</div>
+  <a class="store">保存到手机</a>
+</section>
+
+<section class="share_wrapper">
+  <a class="share_btn" id="sharetosina">分享到新浪微博</a>
+  <a class="share_btn" id="sharetoqq">分享到腾讯微博</a>
+  <a class="share_btn" id="sharetoqqzone">分享到qq空间</a>
+  <a class="cancel_share">取消分享</a>
+</section>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script> 	
+  //消除点击延迟
+  FastClick.attach(document.body);
+  
+  var title = document.title;
+  var url = window.location;
+  var picurl = "http://img1.buknow.com/Public/Uploads/onlineActivity/201504/27/55399f56777821739.jpg";
+  
+  //分享到腾讯微博
+  function sharetoqq(title, url, picurl){
+	  var shareqqstring='http://v.t.qq.com/share/share.php?title='+title+'&url='+url+'&pic='+picurl;  
+	  window.open(shareqqstring);  
+  }
+  //分享到新浪微博
+  function sharetosina(title, url, picurl){  
+	  var sharesinastring='http://v.t.sina.com.cn/share/share.php?title='+title+'&url='+url+'&content=utf-8&sourceUrl='+url+'&pic='+picurl;  
+	  window.open(sharesinastring);  
+  }  
+  //分享到QQ空间  
+  sharetoqqzone=function(title, url, picurl){  
+	 var shareqqzonestring='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?summary='+title+'&url='+url+'&pics='+picurl;  
+	 window.open(shareqqzonestring);  
+  }
+  
+  $("#sharetoqq").click(function(){
+	 sharetoqq(title, url, picurl);
+	 share_close();
+  })
+  $("#sharetosina").click(function(){
+	 sharetosina(title, url, picurl);
+	 share_close();
+  })
+  $("#sharetoqqzone").click(function(){
+	 sharetoqqzone(title, url, picurl);
+	 share_close();
+  }) 
+  function share() {
+	 $("body").append("<div class='popup_bg'></div>");
+	 $(".share_wrapper").css("bottom", "0");
+  }
+  $(".cancel_share").click(function(){
+	 share_close();
+  }) 
+  function share_close() {
+	 $(".popup_bg").remove();
+	 $(".share_wrapper").css("bottom", "-208px");
+  }
+  
+  //点击弹出图片 放大缩小
+  $(".coupon_pic").click(function(){
+	 var $popup_bg = $(".popup_bg");
+	 if($popup_bg.length === 0) {
+		 $("body").append('<div class="popup_bg">'+
+		 '<div class="pic_zoom"><div>'+'<img src="images/media_pcs/quan.png">'+'</div></div>'+
+		 '</div>');
+  
+		 $(".pic_zoom").css("line-height", $(window).height()+"px");
+		 var pic_zoom = new IScroll('.pic_zoom', {zoom: true, scrollX: true, scrollY: true, mouseWheel: true, wheelAction: 'zoom'}); 
+  
+		 document.addEventListener('touchmove', preventDefault, false);
+		 
+		 $(".popup_bg").click(function(){
+			 $(this).hide();
+			 document.removeEventListener('touchmove', preventDefault, false);
+		 })
+	 }else {
+		 $popup_bg.show();
+		 document.addEventListener('touchmove', preventDefault, false);
+	 }
+  })
+  function preventDefault(e) { e.preventDefault(); }; 
+  $(".menu").click(function(){
+		$(".menu_wrapper").toggleClass("menu_down");
+	}) 
+</script>
+</body>
+</html>

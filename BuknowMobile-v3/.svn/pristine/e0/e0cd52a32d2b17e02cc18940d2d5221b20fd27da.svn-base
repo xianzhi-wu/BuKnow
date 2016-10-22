@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="Keywords" content=""/>
+<meta name="Description" content=""/>
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/bn-common.css">
+</head>
+
+<body>
+<header class="header box-layout">
+  <a class="back" href="javascript:void(0);"></a>
+  <div class="header-title box-col">我的帐户</div>
+  <div class="blank-space"></div>
+</header>
+
+<section class="settings-wrapper">
+  <ul>
+    <li id="user-img"><a href="javascript:void(0);" class="single-line"><span>头像</span><div class="user-img"><img src="images/m2.jpg"></div><i class="goto"></i></a></li>
+    <li id="user-name"><a href="javascript:void(0);" class="single-line"><span>昵称</span>555<i class="goto"></i></a></li>
+  </ul>
+  <ul>
+    <li><a href="" class="single-line"><span>修改密码</span><i class="goto"></i></a></li>   
+    <li id="mobile"><a href="javascript:void(0);" class="single-line"><span>绑定手机</span>188****4540<i class="goto"></i></a></li> 
+  </ul>
+  <a href="javascript:void(0);" class="quit-btn">退出</a>
+</section>
+<script src="js/zepto.min.js"></script>
+<script src="js/my-settings.js"></script>
+</body>
+</html>

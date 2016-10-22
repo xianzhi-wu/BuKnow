@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="Keywords" content=""/>
+<meta name="Description" content=""/>
+<title>我的收藏</title>
+<link rel="stylesheet" type="text/css" href="css/bn-common.css">
+</head>
+
+<body>
+<header class="header box-layout">
+  <a class="back" href="javascript:history.go(-1);"></a>
+  <div class="header-title box-col">我的收藏</div>
+  <a href="javascript:void(0);" class="header-icon-btn edit" data-type="deals">编辑</a>
+</header>
+
+<article class="collection">
+  <section class="mycol-nav">
+    <ul class="box-layout">
+     <li class="box-col" data-type="deals"><a href="javascript:void(0);" class="active">优惠(0)</a></li>
+     <li class="box-col" data-type="shops"><a href="javascript:void(0);">商家(0)</a></li>
+    </ul>
+  </section>
+  <section class="deals-list hide" data-type="deals">
+    <a href="http://www.baidu.com" class="box-layout">
+      <div class="delete-area hide"><i class="delete-icon"></i></div>
+      <div class="img img-box"><img src="images/m2.jpg"></div>
+      <div class="cont box-col"> 
+        <div class="title">满50元减7元 满50元减7元 满50元减7元满50元减7元</div>
+        <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+        <div class="expired-time">截止时间:2015-12-30</div>
+      </div>
+    </a>
+    <a href="http://www.baidu.com" class="box-layout">
+      <div class="delete-area hide"><i class="delete-icon"></i></div>
+      <div class="img img-box"><img src="images/m.jpg"></div>
+      <div class="cont box-col"> 
+        <div class="title">满50元减7元</div>
+        <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+        <div class="expired-time">截止时间:2015-12-30</div>
+      </div>
+    </a>
+  </section>
+  <section class="shops-list hide" data-type="shops">
+    <ul>
+      <li>
+        <div class="delete-area hide"><i class="delete-icon"></i></div>
+        <a href="#" class="box-layout">
+          <div class="shop-img img-box"><img src="images/icons/stars.png"></div>
+          <div class="box-col">
+            <div class="shop-name single-line"><i class="shop-icon"></i>永和豆浆</div>
+            <div class="shop-tel"><i class="tel-icon-grey"></i>23223455</div>
+            <div class="shop-address single-line"><i class="location-icon-grey"></i>世界城广场</div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <div class="delete-area hide"><i class="delete-icon"></i></div>
+        <a href="#" class="box-layout">
+          <div class="shop-img img-box"><img src="images/icons/stars.png"></div>
+          <div class="box-col">
+            <div class="shop-name single-line"><i class="shop-icon"></i>永和豆浆</div>
+            <div class="shop-tel"><i class="tel-icon-grey"></i>23223455</div>
+            <div class="shop-address single-line"><i class="location-icon-grey"></i>世界城广场</div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <div class="no-result hide">您还没有任何收藏，去逛逛吧。</div>
+</article>
+<script src="js/zepto.min.js"></script>
+<script src="js/collect_func.js"></script>
+</body>
+</html>

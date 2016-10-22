@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="Keywords" content=""/>
+<meta name="Description" content=""/>
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/bn-common.css">
+</head>
+
+<body>
+<header class="header box-layout">
+  <a class="back" href="javascript:void(0);"></a>
+  <div class="header-title box-col">我的爆料</div>
+  <div class="blank-space"></div>
+</header>
+
+<div class="my-post">
+  <ul>
+    <li>
+      <a href="javascript:void(0);">
+        <div class="p-top"><div class="id">12323</div><div class="p-sign">审核中</div></div>
+        <div class="p-tit">柬埔寨简朴在</div>
+        <div class="p-time">2015-09-12</div>
+      </a>
+      <i class="goto"></i>
+    </li>
+    <li>
+      <a href="#">
+        <div class="p-top"><div class="id">12323</div><div class="p-sign pass"><i class="icon-good"></i>4元</div></div>
+        <div class="p-tit">柬埔寨简朴在</div>
+        <div class="p-time">2015-09-12</div>
+      </a>
+      <i class="goto"></i>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

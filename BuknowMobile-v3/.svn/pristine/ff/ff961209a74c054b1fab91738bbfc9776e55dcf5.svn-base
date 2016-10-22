@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="Keywords" content=""/>
+<meta name="Description" content=""/>
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/bn-common.css">
+</head>
+
+<body>
+<header class="header box-layout">
+  <a class="back" href="javascript:history.go(-1);"></a>
+  <div class="blank-space"></div>
+  <div class="header-title box-col">活动详情</div>
+  <a href="#" class="header-icon-btn"><i class="user-icon"></i></a>
+  <a href="javascript:void(0);" class="header-icon-btn"><i class="share-icon"></i></a>
+</header>
+
+<article>
+  <section class="detail-cont">
+    <div class="detail-img"><img src="images/banner01.jpg"></div>
+    <div class=" basic-info box-layout">
+      <div class="box-col"><div class="title">zara全场5折</div><div class="expired-time">截止时间：2015-12-30</div></div>
+      <div class="collect-area"><i class="collect-icon"></i></div>
+    </div>
+  </section>
+  
+  <section class="shop-cont">
+    <h3>商家信息</h3>
+    <div class="shop-info box-layout">
+      <a href="#" class="box-col">
+        <h4>柬埔寨(楚河汉街店)</h4>
+        <div class="address single-line">武汉市楚河汉街楚河汉街</div>
+      </a>
+      <a href="tel:18825234540" class="tel"><i class="tel-icon"></i></a>
+    </div>
+    <a href="#" class="more-shops">使用商家(12)<i class="goto"></i></a>
+  </section>
+  
+  <section class="desc-cont">
+     <h3>活动详情</h3>
+     <div class="brief-info">十八大以来，习近平主席从民族复兴和世界和平发展大局出发，科学分析国内发展趋势和复杂多变的国际形势，沿着和平发展、独立自主的外交之路，攻坚克难，开拓进取，开启中国特色大国外交新时代。中国已经跨入国际舞台的中心，在国际事务中发挥着越来越大的作用，习近平主席引领中国外交发展的新理念、新举措，引起众多国外政要分析和研究。请随“学习中国”小编一起看看国外政要们是如何看待习主席的外交智慧的</div>
+     <div class="more-desc">查看图文详情<i class="goto"></i></div>
+  </section>
+  
+  <section class="comment-cont">
+    <h3>用户评论<a href="javascript:void(0);" class="comment-link"><i class="comment-icon"></i></a></h3>
+    <div class="comment">
+      <div class="box-layout">
+        <div class="user-img"><img src="images/m2.jpg"></div>
+        <div class="box-col">
+          <div class="user-name">巴黎没有摩天轮</div>
+          <div class="user-info"><i class="stars star4"></i><div class="comment-time">2015-12-30 09:12:56</div></div>
+        </div>
+      </div>
+      <div class="comment-content">不错哦，么么哒。</div>
+    </div>
+    <div class="comment">
+      <div class="box-layout">
+        <div class="user-img"><img src="images/m2.jpg"></div>
+        <div class="box-col">
+          <div class="user-name">巴黎没有摩天轮</div>
+          <div class="user-info"><i class="stars star5"></i><div class="comment-time">2015-12-30 09:12:56</div></div>
+        </div>
+      </div>
+      <div class="comment-content">不错哦，么么哒。</div>
+    </div>
+  </section>
+  
+  <section class="deals-list"> 
+    <h3>相关推荐</h3>
+    <a href="#" class="box-layout">
+      <div class="img img-box"><img src="images/m2.jpg"></div>
+      <div class="cont box-col"> 
+        <div class="title">满50元减7元 满50元减7元 满50元减7元满50元减7元</div>
+        <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+        <div class="shop-name">麦当劳麦当劳</div>
+      </div>
+    </a>
+    <a href="#" class="box-layout">
+      <div class="img img-box"><img src="images/m.jpg"></div>
+      <div class="cont box-col"> 
+        <div class="title">满50元减7元</div>
+        <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+        <div class="shop-name">麦当劳麦当劳麦当劳</div>
+      </div>
+    </a>    
+    <a href="#" class="box-layout">
+      <div class="img img-box"><img src="images/m2.jpg"></div>
+      <div class="cont box-col"> 
+        <div class="title">满50元减7元 满50元减7元 满50元减7元满50元减7元满50元减7元满50元减7元满50元减7元</div>
+        <div class="sub-title"><i class="coupon-icon"></i>满减</div>
+        <div class="shop-name">麦当劳</div>
+      </div>
+    </a>
+  </section>
+</article>
+<div class="share-wrapper">
+  <a class="share-btn" id="sharetosina">分享到新浪微博</a>
+  <a class="share-btn" id="sharetoqq">分享到腾讯微博</a>
+  <a class="share-btn" id="sharetoqqzone">分享到qq空间</a>
+  <a class="cancel-share">取消分享</a>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/detail-func.js"></script>
+</body>
+</html>

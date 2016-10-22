@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="Keywords" content=""/>
+<meta name="Description" content=""/>
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/bn-common.css">
+</head>
+
+<body>
+<header class="header box-layout">
+  <a class="back" href="javascript:void(0);"></a>
+  <div class="header-title box-col">爆料</div>
+  <a href="javascript:void(0);" class="header-icon-btn edit" id="finish">完成</a>
+</header>
+
+<section class="post-wrapper">
+  <div class="top-pic"><img src="images/complete-info.jpg" class="tip-pic"></div>
+  <h3>完善信息<span class="login-tips"></span></h3>
+  <div class="info">
+    <div class="input-line"><i class="mobile"></i><input type="text" id="mobile" class="pl"></div>
+    <div class="input-line last"><i class="vericode-icon"></i><input type="text" id="mobile" class="pl"><a href="javascript:void(0);" class="get-code">获取</a></div>
+  </div>
+</section>
+<script src="js/zepto.min.js"></script>
+<script src="js/validate.js"></script>
+<script>
+$("#finish").click(function() {
+	if (checkMobile() && checkVericode()) {
+	}
+})
+</script>
+</body>
+</html>

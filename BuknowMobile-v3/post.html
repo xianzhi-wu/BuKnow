@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="Keywords" content=""/>
+<meta name="Description" content=""/>
+<title>爆料</title>
+<link rel="stylesheet" type="text/css" href="css/bn-common.css">
+<link rel="stylesheet" type="text/css" href="css/zepto.mdater.css">
+<style type="text/css">
+html, body {height:100%;}
+</style>
+</head>
+
+<body>
+<div class="pages">
+  <div class="page page-on-center" id="post-wrapper">
+    <div class="page-content">
+      <header class="header box-layout">
+        <a class="back" href="javascript:history.go(-1);"></a>
+        <div class="header-title box-col">爆料</div>
+        <a href="javascript:void(0);" class="header-icon-btn edit" id="post">发布</a>
+      </header>
+      
+      <section class="post-wrapper">
+        <form method="post">
+          <h3>图片<span id="pic-tip"></span></h3>
+          <div class="uploaded-pics">
+            <ul></ul>
+            <div class="camera-add"><i class="camera-icon" id="addPic-01"></i></div>
+            <div class="add-pic hide" id="addPic-02"></div>
+          </div>
+          <h3>基本信息</h3>
+          <div class="info">
+            <h4>爆料标题<span id="title-tip"></span></h4>
+            <div class="input-line"><input type="text" id="title" placeholder="在此输入标题"></div>
+            <h4>推荐理由<span id="reason-tip"></span></h4>
+            <div class="input-line"><textarea rows="2" id="reason" placeholder="请填写您推荐的理由"></textarea></div>
+            <h4>活动时间<span id="time-tip"></span></h4>
+            <div class="input-line">
+              <label>起始</label><span id="start"></span>
+              <label>截止</label><input type="text" id="end" placeholder="点击输入" readonly>
+            </div>
+            <h4>活动地址<span id="address-tip"></span></h4>
+            <div class="box-layout center-v"><div class="box-col"><div contenteditable="true" id="address"></div></div><div class="get-address items-stretch"><i class="location-fullgrey"></i></div></div>
+          </div> 
+          <div id="div-imgdata" class="hide"></div>
+        </form>   
+      </section>
+    </div>
+  </div>
+  <div class="page page-on-right" id="complete-info">
+    <div class="page-content">
+      <header class="header box-layout">
+        <a class="back" href="javascript:void(0);" id="toPost"></a>
+        <div class="header-title box-col">完善资料</div>
+        <a href="javascript:void(0);" class="header-icon-btn edit" id="finish">完成</a>
+      </header>
+      
+      <section class="post-wrapper">
+        <div class="top-pic"><img src="images/complete-info.jpg" class="tip-pic"></div>
+        <h3>完善信息<span class="login-tips"></span></h3>
+        <div class="info">
+          <div class="input-line"><i class="mobile"></i><input type="text" id="mobile" class="pl"></div>
+          <div class="input-line last"><i class="vericode-icon"></i><input type="text" id="mobile" class="pl"><a href="javascript:void(0);" class="get-code">获取</a></div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<div style="height:0px;overflow:hidden;">
+  <input type="file" id="f-pic" style="visibility:hidden;" capture="camera" accept="image/jpg, image/jpeg, image/png, image/gif">
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/zepto.mdater.js"></script>
+<script src="js/exif.js"></script>
+<script src="js/canvasFuns.js"></script>
+<script src="js/post-func.js"></script>
+<script src="http://webapi.amap.com/maps?v=1.3&key=ce3b5cdd3320877043e663bd19e9e0e8&plugin=AMap.Geocoder"></script>
+<script src="js/get-address.js"></script>
+<script src="js/post-login.js"></script>
+</body>
+</html>
