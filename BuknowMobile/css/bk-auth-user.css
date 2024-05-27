@@ -63,13 +63,14 @@
 }
 
 .auth-panel .auth-form .auth-btn {
+  margin: 10px 0;
   width: 100%;
   height: 44px;
   line-height: 44px;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 6px;
-  margin: 10px 0;
+  background: none;
 }
 
 .auth-panel .auth-form .auth-btn.reset-pwd {
@@ -101,6 +102,7 @@
 }
 
 .reset-pwd-form .reset-pwd-btn {
+  display: block;
   width: 100%;
   border-radius: 6px;
   background: #259fc4;
@@ -456,7 +458,7 @@
 }
 
 .my-posts ul li a .p-sign .icon-good {
-  background: url(../images/icons/icon-good.png) no-repeat;
+  background: url(../images/icons/bk-icon-good.png) no-repeat;
   background-size: 14px 14px;
   width: 14px;
   height: 14px;

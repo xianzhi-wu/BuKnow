@@ -24,22 +24,16 @@ dd {
 body {
   max-width: 480px;
   margin: 0 auto;
-  background: #fff;
   font-family: Helvetica, Hiragino Sans GB, Arial, "宋体", sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-i {
-  font-style: normal;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: inherit;
 }
 
 a:active,
-a:hover {
+a:focus {
   outline: none;
 }
 
@@ -61,17 +55,24 @@ textarea {
   outline: 0;
   border-radius: 0;
   border: none;
-  padding: 0;
+  font-family: inherit;
 }
 
+input:autofill,
 input:-webkit-autofill {
   background-color: transparent !important;
 }
 
+/* https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/
+SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5 */
+
 textarea,
 input,
 a {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  /* Remove tap highlight */
+  -webkit-tap-highlight-color: transparent;
+  /* For some Androids */
 }
 
 textarea,
@@ -174,7 +175,7 @@ h3 {
   top: 44px;
 }
 
-.popup-tip {
+.modal-noti {
   position: fixed;
   z-index: 9990;
   left: 50%;
@@ -216,52 +217,29 @@ h3 {
 /*加载动画*/
 
 .loading {
-  margin: 12px auto;
   position: relative;
-  border: 1px solid #259fc4;
-  border-left: none;
-  -webkit-animation: loader 0.5s infinite linear;
-  animation: loader 0.5s infinite linear;
-}
-
-.loading,
-.loading:after {
-  border-radius: 50%;
+  margin: 12px auto;
   width: 16px;
   height: 16px;
-}
-
-@-webkit-keyframes loader {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+  border-radius: 50%;
+  border: 1px solid #259fc4;
+  border-left: none;
+  animation: loader 0.5s infinite linear;
 }
 
 @keyframes loader {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
 @media only screen and (min-device-width: 481px) {
-  html {
-    height: 100%;
-  }
-
   body {
-    min-height: 100%;
+    min-height: 100vh;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 }
@@ -272,7 +250,7 @@ h3 {
 .cat-item.on::after,
 .new-icon {
   display: inline-block;
-  background: url("../images/icons/bn-icons-01.png") no-repeat;
+  background: url("../images/icons/bk-icons-01.png") no-repeat;
   background-size: 150px auto;
   height: 16px;
 }
@@ -309,7 +287,7 @@ h3 {
 .collect-icon,
 .collect-icon.collected {
   display: inline-block;
-  background: url("../images/icons/bn-icons-02.png") no-repeat;
+  background: url("../images/icons/bk-icons-02.png") no-repeat;
   background-size: 168px auto;
   height: 20px;
   width: 20px;
@@ -377,7 +355,7 @@ h3 {
   display: block;
   width: 67px;
   height: 12px;
-  background: url("../images/icons/stars.png");
+  background: url("../images/icons/bk-icons-stars.png");
   background-size: 67px auto;
 }
 
@@ -410,7 +388,7 @@ h3 {
 .cat-travel-s,
 .cat-hotel-s {
   display: inline-block;
-  background: url("../images/icons/bn-icons-category.png") no-repeat;
+  background: url("../images/icons/bk-icons-cats.png") no-repeat;
   background-size: 112px auto;
   width: 14px;
   height: 14px;
@@ -462,7 +440,7 @@ h3 {
 .newest-icon {
   width: 24px;
   height: 24px;
-  background: url("../images/icons/bn-icons-user.png") no-repeat;
+  background: url("../images/icons/bk-icons-user.png") no-repeat;
   background-size: 80px auto;
 }
 
@@ -590,7 +568,7 @@ h3 {
   /* Ensure it's a block-level element */
   height: 20px;
   width: 20px;
-  background: url("../images/icons/bn-icons-01.png") no-repeat;
+  background: url("../images/icons/bk-icons-01.png") no-repeat;
   background-size: 150px auto;
 }
 
@@ -702,7 +680,7 @@ h3 {
 .slider-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 50%;
+  padding-top: 48.5%;
   overflow: hidden;
 }
 
@@ -928,13 +906,14 @@ h3 {
 }
 
 .auth-panel .auth-form .auth-btn {
+  margin: 10px 0;
   width: 100%;
   height: 44px;
   line-height: 44px;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 6px;
-  margin: 10px 0;
+  background: none;
 }
 
 .auth-panel .auth-form .auth-btn.reset-pwd {
@@ -967,6 +946,7 @@ h3 {
 }
 
 .reset-pwd-form .reset-pwd-btn {
+  display: block;
   width: 100%;
   border-radius: 6px;
   background: #259fc4;
@@ -1327,7 +1307,7 @@ h3 {
 }
 
 .my-posts ul li a .p-sign .icon-good {
-  background: url("../images/icons/icon-good.png") no-repeat;
+  background: url("../images/icons/bk-icon-good.png") no-repeat;
   background-size: 14px 14px;
   width: 14px;
   height: 14px;
@@ -1376,7 +1356,7 @@ h3 {
   display: block;
   width: 30px;
   height: 30px;
-  background: url(../images/icons/bn-icons-category.png) no-repeat;
+  background: url(../images/icons/bk-icons-cats.png) no-repeat;
   background-size: 168px auto;
   margin: 0 auto 8px;
 }
@@ -1423,6 +1403,8 @@ h3 {
   width: 100px;
   margin-right: 8px;
   border: 1px solid #efefef;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .rec-merchants ul li a.merc-logo {
@@ -1447,21 +1429,15 @@ h3 {
   display: block;
   padding-bottom: 6px;
   margin-bottom: 12px;
-  border-bottom: 1px solid #efefef;
-}
-
-.deals > a:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
 }
 
 .deals > a .img-cont {
   width: 100%;
-  padding-top: 48%;
+  padding-top: 54%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 .deals > a .deal-tit {
@@ -2033,7 +2009,7 @@ a.more {
   vertical-align: middle;
   height: 36px;
   width: 36px;
-  background: url(../images/icons/icon-star.png);
+  background: url(../images/icons/bk-cmnt-stars.png);
   background-size: 36px auto;
 }
 
@@ -2379,7 +2355,7 @@ a.more {
 }
 
 .post-panel .camera-add .camera-icon {
-  background: url(../images/icons/camera.png) no-repeat;
+  background: url(../images/icons/bk-icon-camera.png) no-repeat;
   height: 46px;
   width: 53px;
   background-size: 53px 46px;

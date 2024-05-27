@@ -1,7 +1,7 @@
 var commentForm = {
     stars: $(".comment-stars i"),
     textarea: $(".comment-tarea"),
-    tip: $(".popup-tip"),
+    tip: $(".modal-noti"),
     score: 0,
 
     init: function() {

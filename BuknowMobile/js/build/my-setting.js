@@ -1,7 +1,7 @@
 
 var setting = {
 	showTip : function(msg) {
-		var $tip = $(".popup-tip");
+		var $tip = $(".modal-noti");
 
 		if($tip.hasClass("hide")) {
 			$tip.text(msg).removeClass("hide");

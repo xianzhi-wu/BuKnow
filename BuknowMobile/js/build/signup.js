@@ -90,7 +90,7 @@ var signupForm = {
 
     tip: function(message) {
         var $overlay = $(".overlay");
-        $overlay.find(".popup-tip").text(message);
+        $overlay.find(".modal-noti").text(message);
         $overlay.removeClass("hide");
         setTimeout(function() {
             $overlay.addClass("hide");

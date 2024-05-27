@@ -4,7 +4,7 @@
 .cat-item.on::after,
 .new-icon {
   display: inline-block;
-  background: url(../images/icons/bn-icons-01.png) no-repeat;
+  background: url(../images/icons/bk-icons-01.png) no-repeat;
   background-size: 150px auto;
   height: 16px;
 }
@@ -41,7 +41,7 @@
 .collect-icon,
 .collect-icon.collected {
   display: inline-block;
-  background: url(../images/icons/bn-icons-02.png) no-repeat;
+  background: url(../images/icons/bk-icons-02.png) no-repeat;
   background-size: 168px auto;
   height: 20px;
   width: 20px;
@@ -107,7 +107,7 @@
   display: block;
   width: 67px;
   height: 12px;
-  background: url(../images/icons/stars.png);
+  background: url(../images/icons/bk-icons-stars.png);
   background-size: 67px auto;
 }
 
@@ -141,7 +141,7 @@
 .cat-travel-s,
 .cat-hotel-s {
   display: inline-block;
-  background: url(../images/icons/bn-icons-category.png) no-repeat;
+  background: url(../images/icons/bk-icons-cats.png) no-repeat;
   background-size: 112px auto;
   width: 14px;
   height: 14px;
@@ -193,7 +193,7 @@
 .newest-icon {
   width: 24px;
   height: 24px;
-  background: url(../images/icons/bn-icons-user.png) no-repeat;
+  background: url(../images/icons/bk-icons-user.png) no-repeat;
   background-size: 80px auto;
 }
 

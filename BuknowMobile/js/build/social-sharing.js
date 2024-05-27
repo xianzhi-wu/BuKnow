@@ -89,7 +89,7 @@ var userActions = {
         }
     },
 
-    $popupTip: $(".popup-tip"),
+    $popupTip: $(".modal-noti"),
 
     showTip: function(message) {
         userActions.$popupTip.text(message).removeClass("hide");

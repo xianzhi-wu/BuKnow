@@ -65,7 +65,7 @@ gulp.task('js', function () {
     if (entry.startsWith('js/build/')) {
       return browserify({
         entries: entry,
-        debug: falf // Enable source maps
+        debug: false // Enable source maps
       })
       .transform(babelify, {
         presets: ['@babel/preset-env']

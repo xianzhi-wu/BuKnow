@@ -21,7 +21,7 @@
   display: block;
   width: 30px;
   height: 30px;
-  background: url(../images/icons/bn-icons-category.png) no-repeat;
+  background: url(../images/icons/bk-icons-cats.png) no-repeat;
   background-size: 168px auto;
   margin: 0 auto 8px;
 }
@@ -67,6 +67,8 @@
   width: 100px;
   margin-right: 8px;
   border: 1px solid #efefef;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .rec-merchants ul li a.merc-logo {
@@ -90,21 +92,15 @@
   display: block;
   padding-bottom: 6px;
   margin-bottom: 12px;
-  border-bottom: 1px solid #efefef;
-}
-
-.deals > a:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
 }
 
 .deals > a .img-cont {
   width: 100%; 
-  padding-top: 48%; 
+  padding-top: 54%; 
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 .deals > a .deal-tit {
@@ -668,7 +664,7 @@ a.more {
   vertical-align: middle;
   height: 36px;
   width: 36px;
-  background: url(../images/icons/icon-star.png);
+  background: url(../images/icons/bk-cmnt-stars.png);
   background-size: 36px auto;
 }
 
@@ -1008,7 +1004,7 @@ a.more {
 }
 
 .post-panel .camera-add .camera-icon {
-  background: url(../images/icons/camera.png) no-repeat;
+  background: url(../images/icons/bk-icon-camera.png) no-repeat;
   height: 46px;
   width: 53px;
   background-size: 53px 46px;
