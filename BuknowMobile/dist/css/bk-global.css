@@ -32,9 +32,11 @@ a {
   color: inherit;
 }
 
+a:hover,
 a:active,
 a:focus {
   outline: none;
+  background-color: #e0e0e0;
 }
 
 ul,
@@ -45,6 +47,7 @@ li {
 
 img {
   display: block;
+  width: 100%;
   border: 0;
 }
 
@@ -98,7 +101,7 @@ input {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   line-height: 48px;
 }
@@ -633,9 +636,9 @@ h3 {
 .header .icon-btn.back:after {
   content: "";
   display: block;
-  width: 12px;
-  height: 12px;
-  border: 1px solid #430d49;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #430d49;
   border-top: none;
   border-right: none;
   position: absolute;
@@ -646,7 +649,7 @@ h3 {
 
 .header h1 {
   color: #430d49;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 44px;
 }
@@ -1341,11 +1344,8 @@ h3 {
 
 /*index page*/
 
-.cat-nav {
-  padding: 12px 0;
-}
-
 .cat-nav a {
+  padding: 12px 0;
   text-align: center;
   color: #333;
   font-size: 14px;
@@ -1429,6 +1429,7 @@ h3 {
   display: block;
   padding-bottom: 6px;
   margin-bottom: 12px;
+  border-radius: 6px;
 }
 
 .deals > a .img-cont {
@@ -1457,6 +1458,11 @@ h3 {
   color: #666;
   height: 18px;
   line-height: 18px;
+}
+
+.deals > a .deal-tit,
+.deals > a .deal-sub-tit {
+  padding: 0 8px;
 }
 
 /*搜索页面*/

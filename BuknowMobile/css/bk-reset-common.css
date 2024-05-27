@@ -32,9 +32,11 @@ a {
   color: inherit;
 }
 
+a:hover,
 a:active,
 a:focus {
   outline: none;
+  background-color: #e0e0e0;
 }
 
 ul,
@@ -45,6 +47,7 @@ li {
 
 img {
   display: block;
+  width: 100%;
   border: 0;
 }
 
@@ -92,7 +95,7 @@ input {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   line-height: 48px;
 }

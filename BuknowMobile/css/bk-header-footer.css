@@ -137,9 +137,9 @@
   .header .icon-btn.back:after {
     content: "";
     display: block;
-    width: 12px;
-    height: 12px;
-    border: 1px solid #430d49;
+    width: 11px;
+    height: 11px;
+    border: 2px solid #430d49;
     border-top: none;
     border-right: none;
     position: absolute;
@@ -150,7 +150,7 @@
   
   .header h1 {
     color: #430d49;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     line-height: 44px;
   }

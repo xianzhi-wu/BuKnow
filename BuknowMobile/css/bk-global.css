@@ -6,11 +6,8 @@
 @import url('bk-auth-user.css');
 
 /*index page*/
-.cat-nav {
-  padding: 12px 0;
-}
-
 .cat-nav a {
+  padding: 12px 0;
   text-align: center;
   color: #333;
   font-size: 14px;
@@ -92,6 +89,7 @@
   display: block;
   padding-bottom: 6px;
   margin-bottom: 12px;
+  border-radius: 6px;
 }
 
 .deals > a .img-cont {
@@ -120,6 +118,11 @@
   color: #666;
   height: 18px;
   line-height: 18px;
+}
+
+.deals > a .deal-tit,
+.deals > a .deal-sub-tit {
+  padding: 0 8px;
 }
 
 /*搜索页面*/
