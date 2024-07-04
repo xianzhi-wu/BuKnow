@@ -1,0 +1,246 @@
+.coupon-icon,
+.sale-icon,
+.filter-icon,
+.cat-item.on::after,
+.new-icon {
+  display: inline-block;
+  background: url(../images/icons/bk-icons-01.png) no-repeat;
+  background-size: 150px auto;
+  height: 16px;
+}
+
+.filter-icon {
+  background-position: -123px 0;
+  height: 22px;
+  width: 32px;
+}
+
+.coupon-icon {
+  background-position: -40px -2px;
+  width: 22px;
+}
+
+.sale-icon {
+  background-position: -63px -2px;
+  width: 19px;
+}
+
+.new-icon {
+  background-position: -103px -2px;
+  width: 19px;
+}
+
+.shop-icon,
+.tel-icon-g, /* grey */
+.tel-icon-p, /* purple */
+.loc-icon-fg,
+.loc-icon-g,
+.user-icon,
+.share-icon,
+.comment-icon,
+.collect-icon,
+.collect-icon.collected {
+  display: inline-block;
+  background: url(../images/icons/bk-icons-02.png) no-repeat;
+  background-size: 168px auto;
+  height: 20px;
+  width: 20px;
+}
+
+/*详情页面图标*/
+.user-icon,
+.share-icon,
+.collect-icon,
+.collect-icon.collected,
+.comment-icon,
+.tel-icon-p {
+  height: 24px;
+  width: 24px; 
+}
+
+.user-icon {
+  background-position: -120px 0;
+}
+
+.share-icon {
+  background-position: 0 0;
+}
+
+.collect-icon {
+  background-position: -24px 0;
+}
+
+.collect-icon.collected {
+  background-position: -48px 0;
+}
+
+.comment-icon {
+  background-position: -72px 0;
+}
+
+.tel-icon-p {
+  background-position: -96px 0;
+}
+
+.tel-icon-g {
+  background-position: -20px -25px;
+}
+
+.loc-icon-p {
+  background-position: -144px 0;
+}
+
+.loc-icon-g {
+  background-position: 0 -25px;
+}
+
+.loc-icon-fg {
+  background-position: -60px -25px;
+}
+
+.shop-icon {
+  background-position: -40px -25px;
+}
+
+/*评分*/
+.stars {
+  display: block;
+  width: 67px;
+  height: 12px;
+  background: url(../images/icons/bk-icons-stars.png);
+  background-size: 67px auto;
+}
+
+.star5 {
+  background-position: 0 0;
+}
+
+.star4 {
+  background-position: 0 -15px;
+}
+
+.star3 {
+  background-position: 0 -30px;
+}
+
+.star2 {
+  background-position: 0 -44px;
+}
+
+.star1 {
+  background-position: 0 -59px;
+}
+
+
+.cate-food-s,
+.cat-lady-s,
+.cat-shopping-s,
+.cat-ent-s,
+.cat-service-s,
+.cat-health-s,
+.cat-travel-s,
+.cat-hotel-s {
+  display: inline-block;
+  background: url(../images/icons/bk-icons-cats.png) no-repeat;
+  background-size: 112px auto;
+  width: 14px;
+  height: 14px;
+}
+
+.cate-food-s {
+  background-position: 0 -20px;
+}
+
+.cat-lady-s {
+  background-position: -98px -20px;
+}
+
+.cat-shopping-s {
+  background-position: -14px -20px;
+}
+
+.cat-ent-s {
+  background-position: -28px -20px;
+}
+
+.cat-service-s {
+  background-position: -42px -20px;
+}
+
+.cat-health-s {
+  background-position: -84px -20px;
+}
+
+.cat-travel-s {
+  background-position: -56px -20px;
+}
+
+.cat-hotel-s {
+  background-position: -70px -20px;
+}
+
+.cmnts-icon,
+.cols-icon,
+.posts-icon,
+.mobile-icon,
+.person-icon,
+.password-icon,
+.veri-icon,
+.wallet-icon,
+.alipay-icon,
+.setting-icon,
+.about-icon,
+.newest-icon {
+  width: 24px;
+  height: 24px;
+  background: url(../images/icons/bk-icons-user.png) no-repeat;
+  background-size: 80px auto;
+}
+
+.cmnts-icon {
+  background-position: 0 0;
+}
+
+.cols-icon {
+  background-position: -27px 0;
+}
+
+.posts-icon {
+  background-position: -55px 0;
+}
+
+.mobile-icon {
+  background-position: -28px -25px
+}
+
+.person-icon {
+  background-position: 0 -69px;
+}
+
+.password-icon {
+  background-position: -28px -69px;
+}
+
+.veri-icon {
+  background-position: -55px -69px;
+}
+
+.wallet-icon {
+  background-position: 0 -25px;
+}
+
+.alipay-icon {
+  background-position: -55px -25px
+}
+
+.setting-icon {
+  background-position: 0 -48px;
+}
+
+.about-icon {
+  background-position: -28px -48px;
+}
+
+.newest-icon {
+  background-position: -55px -48px;
+}

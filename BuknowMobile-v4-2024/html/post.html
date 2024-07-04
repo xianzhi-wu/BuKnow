@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="format-detection" content="email=no"/>
+  <meta name="apple-mobile-web-app-title" content=""/>
+  <meta name="Keywords" content=""/>
+  <meta name="Description" content=""/>
+  <title>爆料</title>
+  <link rel="stylesheet" type="text/css" href="../css/bk-global.css"/>
+</head>
+
+<body>
+  <header class="header flex-layout">
+    <a class="icon-btn back" href="javascript:history.back();"></a>
+    <h1 class="flex-item">爆料</h1>
+    <div id="post" class="icon-btn">发布</div>
+  </header>
+
+  <form>
+    <section class="post-panel">
+        <h2>图片<span id="pic-tip"></span></h2>
+        <div class="uploaded-pics">
+          <ul></ul>
+          <div class="camera-add">
+            <i id="addPic-01" class="camera-icon"></i>
+          </div>
+          <div id="addPic-02" class="add-pic hide"></div>
+        </div>
+
+        <h2>基本信息</h2>
+        <div class="info">
+          <h3>爆料标题<span id="title-tip"></span></h3>
+          <div class="input-line">
+            <input type="text" id="title" placeholder="在此输入标题"/>
+          </div>
+          <h3>推荐理由<span id="reason-tip"></span></h3>
+          <div class="input-line">
+            <textarea
+              rows="2"
+              id="reason"
+              placeholder="请填写您推荐的理由"
+            ></textarea>
+          </div>
+          <h3>活动时间<span id="time-tip"></span></h3>
+          <div class="input-line">
+            <label>起始</label><span id="start"></span> <label>截止</label>
+            <input
+              type="text"
+              id="end"
+              placeholder="点击输入"
+              readonly
+            />
+          </div>
+          <h3>活动地址<span id="addr-tip"></span></h3>
+          <div class="flex-layout cv">
+            <div class="flex-item">
+              <div id="addr" contenteditable="true"></div>
+            </div>
+            <div class="get-addr items-stretch">
+              <i class="loc-icon-fg"></i>
+            </div>
+          </div>
+        </div>
+        <div id="div-imgdata" class="hide"></div>
+    </section>
+
+    <section class="post-panel hide">
+      <div class="top-pic">
+        <img src="../images/comp-info.jpg" class="tip-pic"/>
+      </div>
+      <h2>完善信息<span class="valid-tip"></span></h2>
+      <div class="info">
+          <div class="input-line">
+            <i class="mobile-icon"></i>
+            <input type="text" id="mobile" class="pl"/>
+          </div>
+          <div class="input-line last">
+            <i class="veri-icon"></i>
+            <input type="text" id="vericode" class="pl"/>
+            <div class="get-code">获取</div>
+          </div>
+      </div>
+    </section>
+
+    <input type="file" id="f-pic" style="visibility: hidden" capture="camera"accept="image/jpg, image/jpeg, image/png, image/gif"/>
+  </form>
+</body>
+</html>

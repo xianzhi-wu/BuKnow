@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="format-detection" content="email=no"/>
+  <meta name="apple-mobile-web-app-title" content=""/>
+  <meta name="Keywords" content=""/>
+  <meta name="Description" content=""/>
+  <title>注册</title>
+  <link rel="stylesheet" type="text/css" href="../css/bk-global.css"/>
+</head>
+
+<body class="auth-panel">
+    <a href="javascript:history.back();" class="back">返回</a>
+
+    <figure>
+      <img src="../images/icons/bk-logo-01.png" class="bk-logo-1"/>
+    </figure>
+
+    <div class="valid-tip"></div>
+    <form class="auth-form">
+      <div class="flex-layout cv input-line">
+        <i class="mobile-icon"></i>
+        <input type="text" id="mobile" class="flex-item" placeholder="手机号" autocomplete="off"/>
+      </div>
+      <div class="flex-layout cv input-line">
+        <i class="veri-icon"></i>
+        <input type="text" id="vericode" class="flex-item" placeholder="验证码" autocomplete="off"/>
+        <button id="get-code" class="get-code">获取</button>
+      </div>
+      <div class="flex-layout cv input-line">
+        <i class="password-icon"></i>
+        <input type="password" id="password" class="flex-item" placeholder="密码" autocomplete="off"/>
+      </div>
+      <div class="sub-line">我已阅读并同意<a href="#" class="agreement">《buknow用户协议》</a></div>
+      <button type="submit" id="signup" class="auth-btn">注册</button>
+    </form>
+
+    <div class="overlay hide"><div class="modal-noti"></div></div>
+
+    <script src="../js/lib/zepto.js"></script>
+    <script src="../js/build/signup.js"></script>
+</body>
+</html>

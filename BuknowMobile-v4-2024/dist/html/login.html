@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="format-detection" content="email=no"/>
+  <meta name="apple-mobile-web-app-title" content=""/>
+  <meta name="Keywords" content=""/>
+  <meta name="Description" content=""/>
+  <title>登录</title>
+  <link rel="stylesheet" type="text/css" href="../css/bk-global.css"/>
+</head>
+
+<body class="auth-panel">
+  <a href="javascript:history.back();" class="back">返回</a>
+
+  <figure>
+    <img src="../images/icons/bk-logo-01.png"  class="bk-logo-1"/>
+  </figure>
+
+  <div class="valid-tip"></div>
+  <form id="auth-form" class="auth-form">
+    <div class="flex-layout cv input-line">
+      <i class="person-icon"></i>
+      <input type="text" id="username" class="flex-item" placeholder="手机／邮箱号" autocomplete="off"/>
+    </div>
+    <div class="flex-layout cv input-line">
+      <i class="password-icon"></i>
+      <input type="password" id="password" class="flex-item" placeholder="密码" autocomplete="off"/>
+    </div>
+    <div class="flex-layout sp sub-line">
+      <a href="recover-password.html">忘记密码?</a>
+      <a href="signup.html" class="signup">新用户注册</a>
+    </div>
+    <button type="submit" id="login" class="auth-btn">登录</button>
+  </form>
+  
+  <script src="../js/lib/zepto.js"></script>
+  <scrip src="../js/build/login.js"></script>
+</body>
+</html>

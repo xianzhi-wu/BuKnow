@@ -1,0 +1,112 @@
+/*下拉分类*/
+.catlist-nav {
+    position: relative;
+    z-index: 9995;
+    background: #fff;
+  }
+  
+  .catlist-nav .cate {
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .catlist-nav .cate ul li {
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .catlist-nav .cate ul li.selected a {
+    color: #430d49;
+  }
+  
+  .catlist-nav .cate ul li a .drop {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #666;
+    border-top: none;
+    border-right: none;
+    position: relative;
+    top: -3px;
+    margin-left: 8px;
+    transform: rotate(-45deg);
+    transition: all 0.2s linear;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  .catlist-nav .cate ul li.selected a .drop {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    top: 1px;
+    border: 1px solid #430d49;
+    border-top: none;
+    border-right: none;
+  }
+  
+  .catlist-nav .cate ul li:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-left: 1px solid #efefef;
+  }
+  
+  .catlist-nav .cate ul li:first-child:after {
+    border-left: none;
+  }
+  
+  .dropdown-selector {
+    position: absolute;
+    top: 44px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .dropdown-selector .selector-wrapper {
+    background: #fafafa;
+  }
+  
+  .selector-wrapper .selector-view {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .selector-wrapper .selector-sider {
+    position: relative;
+    overflow: hidden;
+    background: #f2f2f2;
+  }
+  
+  .selector-wrapper .selector-view ul li.selected {
+    background: #f2f2f2;
+  }
+  
+  .selector-wrapper .selector-view ul li.selected a,
+  .selector-wrapper .selector-sider ul li a.selected {
+    color: #430d49;
+  }
+  
+  .selector-wrapper .selector-view ul li a .right-arrow {
+    right: 12px;
+  }
+  
+  .selector-wrapper .selector-view ul li.selected a .right-arrow {
+    border-top: 1px solid #430d49;
+    border-right: 1px solid #430d49;
+  }
+  
+  .selector-wrapper .selector-view ul li a,
+  .selector-wrapper .selector-sider ul li a {
+    position: relative;
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 12px;
+    font-size: 14px;
+    border-bottom: 1px solid #e0e0e0;
+  }

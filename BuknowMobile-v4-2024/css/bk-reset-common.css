@@ -1,0 +1,238 @@
+*,
+:before,
+:after {
+	box-sizing: border-box
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+ol,
+ul,
+li,
+p,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0
+}
+
+body {
+  max-width: 480px;
+  margin: 0 auto;
+  font-family: Helvetica, Hiragino Sans GB, Arial, "宋体", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover,
+a:active,
+a:focus {
+  outline: none;
+  background-color: #e0e0e0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  outline: 0;
+  border-radius: 0;
+  border: none;
+  font-family: inherit;
+}
+
+input:autofill,
+input:-webkit-autofill {
+  background-color: transparent !important;
+}
+
+/* https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/
+SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5 */
+textarea,
+input,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* Remove tap highlight */
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+textarea,
+input {
+  resize: none;
+}
+
+.single-line {
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide the overflowing text */
+  text-overflow: ellipsis; /* Display an ellipsis (...) to represent clipped text */
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 48px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 28px;
+}
+
+/*弹性布局*/
+.flex-layout {
+  display: flex;
+}
+
+.flex-item {
+  flex: 1;
+}
+
+/* https://css-tricks.com/flexbox-truncated-text */
+.flex-layout .flex-item-trunc {
+  flex: 1;
+  min-width: 0;
+}
+
+/*垂直居中*/
+.flex-layout.cv {
+  align-items: center;
+}
+
+.flex-layout .scv {
+  align-self: center;
+}
+
+.flex-layout .flex-item-scv {
+  flex: 1;
+  align-self: center;
+}
+
+/*水平居中*/
+.flex-layout.ch {
+  justify-content: center;
+}
+
+.flex-layout.sp {
+  justify-content: space-between;
+}
+
+.grid-layout {
+  display: grid;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 9990;
+  top: 0px;
+  bottom: 0;
+  left: 0px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay.t44 {
+  top: 44px;
+}
+
+.modal-noti {
+  position: fixed;
+  z-index: 9990;
+  left: 50%;
+  top: 56px;
+  transform: translateX(-50%);
+  font-size: 15px;
+  line-height: 20px;
+  padding: 12px;
+  color: #fff;
+  border-radius: 6px;
+  width: 264px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.hide {
+  display: none;
+}
+
+.right-arrow {
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  transform: rotate(45deg);
+}
+
+.right-arrow.cv {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.gap-row {
+  height: 12px;
+  background-color: #f0f0f0;
+}
+
+/*加载动画*/
+.loading {
+  position: relative;
+  margin: 12px auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #259fc4;
+  border-left: none;
+  animation: loader 0.5s infinite linear;
+
+}
+  
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+  
+@media only screen and (min-device-width: 481px) {
+  body {
+    min-height: 100vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+}

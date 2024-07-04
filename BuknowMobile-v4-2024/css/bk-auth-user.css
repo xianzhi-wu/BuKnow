@@ -1,0 +1,491 @@
+
+/*登录注册页面*/
+.auth-panel {
+  background: url(../images/user/login-bg.jpg) no-repeat;
+  background-size: 100% auto;
+  background-color: #fff;
+}
+
+.auth-panel .bk-logo-1 {
+  height: 70px;
+  width: 70px;
+  margin: 18px auto;
+  overflow: hidden;
+}
+
+.auth-panel .auth-form {
+  margin: 0 16px;
+}
+
+.auth-panel .auth-form .input-line {
+  border-bottom: 1px solid #ccc;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+.auth-panel .auth-form .input-line input {
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  background: none;
+  padding-left: 12px;
+}
+
+.auth-panel .auth-form .input-line .get-code {
+  min-width: 56px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 6px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #999;
+  background: none;
+}
+
+.auth-panel .auth-form .sub-line {
+  margin: 6px;
+  height: 44px;
+  font-size: 13px;
+  color: #666;
+}
+
+.auth-panel .auth-form .sub-line a {
+  height: 44px;
+  line-height: 44px;
+}
+
+.auth-panel .auth-form .sub-line a.signup,
+.auth-panel .auth-form .sub-line a.agreement {
+  color: #db384c;
+}
+
+.auth-panel .auth-form .auth-btn {
+  margin: 10px 0;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: none;
+}
+
+.auth-panel .auth-form .auth-btn.reset-pwd {
+  margin-top: 32px;
+}
+
+/* 修改密码 */
+.reset-pwd-form {
+  margin: 16px;
+  font-size: 14px;
+}
+
+.reset-pwd-form .input-cont {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.reset-pwd-form .input-cont input {
+  height: 44px;
+  line-height: 44px;
+  width: 100%;
+  padding: 8px 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.reset-pwd-form .input-cont input:last-child {
+  border-bottom: 0;
+}
+
+.reset-pwd-form .reset-pwd-btn {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  background: #259fc4;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  margin-top: 24px;
+}
+
+.valid-tip {
+  color: #f00;
+  font-size: 14px;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+  margin: 16px 0;
+}
+
+/*个人中心*/
+.user-center-top {
+  position: relative;
+}
+
+.user-center-top img {
+  width: 100%;
+}
+
+.user-center-top .user-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -53px;
+  width: 200px;
+  height: 106px;
+}
+
+.user-center-top .user-box .user-img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.user-center-top .user-box .user-name {
+  height: 18px;
+  line-height: 18px;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+.user-nav a {
+  border-right: 1px solid #e0e0e0;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.user-nav a:last-child {
+  border-right: none;
+}
+
+.user-nav a span {
+  height: 16px;
+  margin-top: 2px;
+  display: block;
+}
+
+.user-nav a i {
+  display: block;
+  margin: 0 auto;
+}
+
+.user-nav-line a {
+  padding: 0 12px;
+  height: 44px;
+  line-height: 44px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.user-nav-line a:last-child {
+  border-bottom: none;
+}
+
+.user-nav-line a i {
+  display: inline-block;
+  margin-right: 4px;
+  height: 20px;
+  width: 20px;
+}
+
+.user-nav-line a .my-credit {
+  text-align: right;
+  font-size: 12px;
+  color: #666;
+}
+
+.user-nav-line a .my-credit span {
+  color: #f00;
+  font-size: 14px;
+}
+
+.auth-panel .back,
+.user-center-top .back {
+  position: relative;
+  left: 12px;
+  height: 44px;
+  line-height: 44px;
+  width: 44px;
+  padding-left: 12px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.auth-panel .back::after,
+.user-center-top .back::after {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fff;
+  border-top: none;
+  border-right: none;
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.user-center-top .back {
+  position: absolute;
+  top: 0;
+}
+
+/*我的评论*/
+.my-cmnts ul li {
+  position: relative;
+  padding: 0 0 8px 12px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.my-cmnts ul li a.cmnt-tit {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.my-cmnts ul li a.cmnt-tit i.right-arrow {
+  right: 12px;
+}
+
+.my-cmnts ul li .cmnt-time {
+  font-size: 12px;
+  color: #999;
+  margin-right: 12px;
+  text-align: right;
+}
+
+.my-cmnts ul li .cmnt-content {
+  font-size: 16px;
+  color: #000;
+  padding-top: 8px;
+}
+
+/*我的收藏*/
+.my-col-nav {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.my-col-nav ul li {
+  position: relative;
+}
+
+.my-col-nav ul li:after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  top: 0;
+  right: 0;
+  border-right: 1px solid #efefef;
+}
+
+.my-col-nav ul li:last-child:after {
+  border-right: none;
+}
+
+.my-col-nav ul li .active {
+  color: #259fc4;
+}
+
+.my-col-nav ul li .active:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #259fc4;
+}
+
+.my-col-panel .deals-list {
+  margin: 12px 0;
+}
+
+.my-col-panel .deals-list a.pl {
+  padding-left: 60px;
+}
+
+.my-col-panel .del-area {
+  position: absolute;
+  top: 26px;
+  left: 8px;
+  height: 44px;
+  width: 44px;
+}
+
+.my-col-panel .del-area .del-icon {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin: 10px auto 0;
+  overflow: hidden;
+  background: #f00;
+  transform: rotate(45deg);
+}
+
+.my-col-panel .del-area .del-icon:before {
+  position: absolute;
+  content: '';
+  border-left: 2px solid #fff;
+  height: 12px;
+  left: 9px;
+  top: 4px;
+}
+
+.my-col-panel .del-area .del-icon:after {
+  position: absolute;
+  content: '';
+  border-bottom: 2px solid #fff;
+  width: 12px;
+  left: 4px;
+  top: 9px;
+}
+
+/*我的设置*/
+.setting-panel {
+  margin: 12px;
+}
+
+.setting-panel ul {
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+.setting-panel ul li {
+  height: 44px;
+  line-height: 44px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.setting-panel ul li a {
+  position: relative;
+  padding: 0 30px 0 64px;
+  height: 100%;
+  font-size: 12px;
+  color: #666;
+  text-align: right;
+  display: block;
+}
+
+.setting-panel ul li a span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.setting-panel ul li a .user-img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  float: right;
+  margin-top: 8px;
+}
+
+.setting-panel ul li a i.right-arrow {
+  display: block;
+  right: 5px;
+}
+
+.setting-panel .logout-btn {
+  border-radius: 6px;
+  background: #259fc4;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  margin-top: 32px;
+}
+
+/*我的爆料*/
+.my-posts ul li {
+  position: relative;
+  padding: 5px 30px 5px 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.my-posts ul li a {
+  display: block;
+}
+
+.my-posts ul li a .p-top {
+  height: 32px;
+  font-size: 14px;
+}
+
+.my-posts ul li a .id {
+  width: 72px;
+  line-height: 32px;
+  float: left;
+}
+
+.my-posts ul li a .p-sign {
+  height: 20px;
+  line-height: 20px;
+  color: #fff;
+  margin-top: 6px;
+  width: 64px;
+  text-align: center;
+  background: #c1d19d;
+  float: left;
+  border-radius: 5px;
+}
+
+.my-posts ul li a .p-sign.pass {
+  background: #eab7c8;
+}
+
+.my-posts ul li a .p-sign .icon-good {
+  background: url(../images/icons/bk-icon-good.png) no-repeat;
+  background-size: 14px 14px;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
+.my-posts ul li i.right-arrow {
+  display: block;
+  right: 12px;
+}
+
+.my-posts ul li a .p-tit {
+  color: #333;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.my-posts ul li a .p-pic {
+  height: 120px;
+  background-color: #f6f6f6;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.my-posts ul li a .p-time {
+  font-size: 12px;
+  color: #666
+}
