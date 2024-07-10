@@ -89,7 +89,10 @@
   display: block;
   padding-bottom: 6px;
   margin-bottom: 12px;
-  border-radius: 6px;
+}
+
+.deals > a:hover {
+  border-radius: 4px;
 }
 
 .deals > a .img-cont {
@@ -98,7 +101,12 @@
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
-  border-radius: 6px;
+  border-radius: 4px;
+}
+
+.deals > a:hover .img-cont {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .deals > a .deal-tit {

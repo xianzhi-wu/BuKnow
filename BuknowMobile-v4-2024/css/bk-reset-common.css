@@ -33,8 +33,7 @@ a {
 }
 
 a:hover,
-a:active,
-a:focus {
+a:active {
   outline: none;
   background-color: #e0e0e0;
 }
